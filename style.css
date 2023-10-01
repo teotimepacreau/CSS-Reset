@@ -86,10 +86,20 @@ textarea:not([rows]) {
    overflow: visible; 
  }
 
-*:focus-visible{ 
-   outline: 0.1px ridge carmine; 
-   filter: drop-shadow(0 0 2rem carmine); 
- }
+*:focus-visible{
+  transition: box-shadow 0.3s ease;
+  outline: 3px chartreuse solid;
+  box-shadow: 0 0 7px 0px chartreuse;
+}
+
+button:focus-visible{
+  outline-offset: 0.8ex;
+}
+
+a:focus-visible{
+  outline-offset: 0.8ex;
+  box-shadow: none;
+}
 
 input { 
    appearance: none; 
