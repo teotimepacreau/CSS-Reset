@@ -92,6 +92,13 @@ textarea:not([rows]) {
   box-shadow: 0 0 7px 0px chartreuse;
 }
 
+/* FOCUS ON LIGHT BACKGROUNDS  */
+/* *:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsla(210, 52%, 42%, 1.00), 
+              0 0 0 .6rem hsla(200, 72%, 83%, 0.75);
+} */
+
 button:focus-visible{
   outline-offset: 0.8ex;
 }
