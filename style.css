@@ -202,3 +202,46 @@ button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
+
+/* TABLES */
+ table {
+  border-collapse: collapse;
+} 
+
+th {
+  font-weight: bold;
+  background-color: var(--bgdarken65);
+}
+
+th,td, caption {
+  padding: calc(0.5*var(--rythme));
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid var(--txt);
+}
+
+/* RESPONSIVE TABLES ON MOBILE : pour que ça fonctionne nécessaire que chaque td ait un attribute 'data-cell' qui soit égal au th de sa colonne, par exemple : th "job-title", td doit être <td data-cell="job-title"> */
+
+@media (width < 700px){
+  th {
+    display: none;
+  }
+  td{
+    display: grid;
+    grid-template-columns: 15ch auto;
+    gap: calc(0.75*var(--rythme));
+    padding: calc(0.25*var(--rythme));
+  }
+  td::before{
+    content: attr(data-cell) ": ";
+    font-weight: 700;
+  }
+  td:first-child{
+    padding-top: calc(0.5*var(--rythme));
+  }
+  td:last-child{
+    padding-bottom: calc(0.5*var(--rythme));
+  }
+}
