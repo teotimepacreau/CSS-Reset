@@ -61,9 +61,10 @@ body {
 }
 
 /* Set shorter line heights on headings and text-wrap */
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.3;
+h1, h2, h3, h4, h5, h6,
+dt, blockquote, figcaption {
   text-wrap: balance;
+  max-inline-size: 25ch;
 }
 
 a {
